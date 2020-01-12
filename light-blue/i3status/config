@@ -1,0 +1,39 @@
+general  {
+	interval = 10
+	markup = pango
+}
+
+order += "battery 0"
+order += "cpu_usage"
+order += "volume master"
+order += "tztime ldn"
+order += "wireless wlan0"
+order += "space"
+
+battery 0 {
+	format = "<span background='#bf616a'> %status %remaining </span>"
+	status_chr = "⚡"
+	status_bat = "🔋"
+}
+
+cpu_usage {
+	format = "<span background='#ffb357'> 💻 CPU %usage </span>"
+}
+
+volume master {
+        format = "<span background='#a2e683'> 🎶 %volume </span>"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+tztime ldn {
+	
+        format = "<span background='#5ebdbd'> ⌚️ %time </span>"
+	format_time = "%Y-%m-%d %H:%M:%S %Z"
+        timezone = "Europe/London"
+
+
+}
+
